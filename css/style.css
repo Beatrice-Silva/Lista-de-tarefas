@@ -1,0 +1,31 @@
+:root{
+    --cor-fundo: #D9DDD3
+    --cor-superficie: #F4F5EF
+    --cor-texto: 
+    --cor-principal:
+    --cor-erro:
+
+}
+
+.main{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+
+}
+
+.form{
+
+}
+input,select{
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid var(--cor-texto);
+    border-radius: 6px;
+}
+
+
+
