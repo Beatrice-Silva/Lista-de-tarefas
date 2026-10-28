@@ -1,9 +1,9 @@
 :root{
-    --cor-fundo: #D9DDD3
-    --cor-superficie: #F4F5EF
-    --cor-texto: 
-    --cor-principal:
-    --cor-erro:
+    --cor-fundo: #D9DDD3;
+    --cor-superficie: #F4F5EF;
+    --cor-texto: #1E2A38;
+    --cor-principal: #D9DDD3;
+    --cor-erro: ;
 
 }
 
@@ -16,9 +16,6 @@
 
 }
 
-.form{
-
-}
 input,select{
     width: 100%;
     padding: 0.6rem;
@@ -26,6 +23,23 @@ input,select{
     border: 1px solid var(--cor-texto);
     border-radius: 6px;
 }
+.painel{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2 rem 1.25rem;
+}
 
+button{
+    margin-top: 1.25rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    
+
+}
+
+.perigo{
+    border-color: #cc0303;
+    background-color: #1E2A38;
+}
 
 
