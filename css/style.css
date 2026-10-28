@@ -1,10 +1,13 @@
 :root{
-    --cor-fundo: #D9DDD3;
-    --cor-superficie: #F4F5EF;
-    --cor-texto: #1E2A38;
-    --cor-principal: #D9DDD3;
-    --cor-erro: ;
+    --cor-fundo: #605a83;
+    --cor-superficie: #e29126;
+    --cor-texto: #0d070e;
+    --cor-suave: #bcd7e7;
+    --cor-erro: #96080f;
 
+}
+*{
+    background-color: var(--cor-fundo);
 }
 
 .main{
@@ -33,8 +36,18 @@ button{
     margin-top: 1.25rem;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
-    
+}
+button:hover {
+    filter: brightness(0.9);
+  }
 
+  .ok{
+    border-color: #0a50a0;
+    background-color: #a0c2e9;
+}
+.resultado{
+    border-color: #8c88a1;
+    background-color: #bdbfc2;
 }
 
 .perigo{
@@ -42,4 +55,15 @@ button{
     background-color: #1E2A38;
 }
 
+
+.perigo,
+.ok,
+.resultado{
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 6px solid var(--cor-texto);
+    background-color: var(--cor-suave);
+    white-space: pre-line;
+}
 

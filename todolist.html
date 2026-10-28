@@ -2,51 +2,34 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>To do list</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
     <header>
         <h1>Minhas listas de tarefas</h1>
+        <h2>Listagens de tarefas organizadas abaixo:</h2>
     </header>
-    
-
-    <section class="opcoes">
-
-        <button class="Criar">Criar uma nova lista</button>
-
-    </section>
     
     <section class="listagem">
 
+        <h3 hidden>Não há tarefas por aqui ainda... ~* </h3>
+        
+        <ul >
+            <li ></li>
+        </ul>
+
+
 
     </section>
 
-        
     <main class="Painel">
 
-        <section class="Formulario" >
-
-        <h1>Conteúdo da lista:</h1>
-
-        <form>
-
-            <label for="titulo">Titulo:</label>
-            <input type="text" id="titulo" placeholder="Título da lista" required>
-
-            <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" placeholder="Descrição breve da função desta lista." required>
-        </form>
-
-        <button>Nova lista</button>
-            
-        <button class="Excluir">Excluir </button>
-    </section>     
-
-    <button class="formbutton">Criar uma nova tarefa</button>
+    <button class="criarLista">Criar uma nova tarefa</button>
 
     <section class="Formulario">
 
@@ -66,9 +49,9 @@
             <label for="dataT">Data termino: (opcional)</label>
             <input type="date" id="dataT">
 
-            <button>Nova tarefa na lista</button>
+            <button class="criarTarefa">Criar tarefa</button>
             
-        <button class="Excluir">Excluir </button>
+        <button class="excluir">Excluir </button>
         </form>
 
        
