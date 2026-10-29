@@ -1,12 +1,18 @@
 :root{
     --cor-fundo: #e7e7e7;
     --cor-superficie: #FFFFFF;
+
     --cor-texto: #1A1625;
     --cor-principal: #9c620a;
+
+    --cor-perigo: #46634f;
     --cor-perigo: #E84343;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+    margin:0; 
+    padding:0;
+    box-sizing:border-box; }
 
 body{
     display: grid;
@@ -18,7 +24,7 @@ body{
     padding: 16px;
 }
 
-.container{
+.container, .card{
     width: 100%;
     max-width: 600px;
     background: var(--cor-superficie);
@@ -49,6 +55,9 @@ input{
 }
 
 button{
+
+    justify-content: space-between;
+
     padding: 12px 16px;
     border-radius: 8px;
     border: none;
