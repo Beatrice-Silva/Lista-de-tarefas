@@ -15,45 +15,37 @@
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-
     <div class="container">
-
         <h1>Minhas listas de tarefas</h1>
         <h2>Listagens de tarefas organizadas abaixo:</h2>
-
         <p><strong>Hoje</strong></p>
     
-    
-    <section class="form">
+        <section class="form">
+            <form id="form">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" placeholder="Título da tarefa.">
 
-        <form>
-            <label for="titulo">Título:</label>
-            <input type="text" id="titulo" placeholder="Título da tarefa." required>
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" placeholder="Descrição da tarefa.">
 
-            <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" placeholder="Descrição da tarefa." required>
-        
+                <label for="dataI">Data início: (opcional)</label>
+                <input type="date" id="dataI">
 
-            <label for="dataI">Data início: (opcional)</label>
-            <input type="date" id="dataI">
+                <label for="dataT">Data termino: (opcional)</label>
+                <input type="date" id="dataT">
 
-            <label for="dataT">Data termino: (opcional)</label>
-            <input type="date" id="dataT">
+                <button type="submit">Criar nova tarefa</button>
+            </form>
+        </section>
 
-            <button type="submit" >Criar nova tarefa</button>
-            
-        <button class="excluir">Excluir </button>
-        </form>
-</div>
+        <!-- FORA do form, mas DENTRO do container -->
         <p id="mensagem-erro" hidden></p>
         <h3 id="aviso-vazio">Não há tarefas por aqui ainda</h3>
         <ul id="lista"></ul>
 
+    </div>
     
-    
-   <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>
