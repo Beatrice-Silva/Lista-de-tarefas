@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <title>To do list</title>
 
     <link rel="stylesheet" href="./css/style.css">
@@ -10,31 +18,15 @@
 
 <body>
 
-    <header>
+    <div class="container">
+
         <h1>Minhas listas de tarefas</h1>
         <h2>Listagens de tarefas organizadas abaixo:</h2>
-    </header>
+
+        <p><strong>Hoje</strong></p>
     
-    <section class="listagem">
-
-        <h3 hidden>Não há tarefas por aqui ainda... ~* </h3>
-        
-        <ul>
-            <li></li>
-        </ul>
-
-        <card> tarefas</card>
-
-
-    </section>
-
-    <main class="Painel">
-
-    <button class="criarLista">Criar uma nova tarefa</button>
-
-    <section class="Formulario">
-
-        <h1>Conteúdo da tarefa</h1>
+    
+    <section class="form">
 
         <form>
             <label for="titulo">Título:</label>
@@ -50,25 +42,18 @@
             <label for="dataT">Data termino: (opcional)</label>
             <input type="date" id="dataT">
 
-            <button class="criarTarefa">Criar tarefa</button>
+            <button type="submit" >Criar nova tarefa</button>
             
         <button class="excluir">Excluir </button>
         </form>
+</div>
+        <p id="mensagem-erro" hidden></p>
+        <h3 id="aviso-vazio">Não há tarefas por aqui ainda</h3>
+        <ul id="lista"></ul>
 
-       
-    </section>   
     
-
-
-    <section class=""></section>
-
-        
-
-
-
-    </main>
- 
-   
+    
+   <script src="./js/script.js"></script>
 </body>
 
 </html>
