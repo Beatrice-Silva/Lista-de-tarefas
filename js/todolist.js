@@ -15,9 +15,10 @@ let lista = []
 
 
 form.addEventListener('submit', (e) => {
-
     e.preventDefault()
-    const titulo = titulo.value.trim()
+
+    const titulo = novaTarefa.value.trim()
+    //const data = dataTarefa.value.trim()
 
     const descricao = descricao.value.trim()
 
@@ -28,20 +29,24 @@ form.addEventListener('submit', (e) => {
         erro.hidden = true
         return
     }else{ 
+        
         erro.hidden = false
         tarefas.push({
-            id: Date.now(),
-            titulo,
-            descricao,
-            dataI: dataIInput.value,
-            dataT: dataTInput.value
+
+            titulo: titulo,
+            descricao: descricao,
+            data: data,
+            dataI: dataIInput,
+            dataT: dataTInput,
+            concluida: false,
         })
 
+        form.reset()
+        tituloInput.focus()
+        render()
     }
 
-    form.reset()
-    tituloInput.focus()
-    render()
+   atualizarLista()
 });
 
 function atualizarLista(){

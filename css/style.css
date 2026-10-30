@@ -33,10 +33,13 @@ body{
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-h1{
+h1, .segundotitulo{
     text-align: center;
     margin-bottom: 20px;
     color: var(--cor-principal);
+}
+h3{
+    color: var(--cor-texto);
 }
 
 form{
@@ -52,6 +55,7 @@ input{
     border-radius: 8px;
     border: 1px solid var(--cor-fundo);
     background: var(--cor-superficie);
+    color: var(--cor-texto);
 }
 
 button{
