@@ -1,56 +1,43 @@
 
-const form = document.getElementById('form')
+const formulario = document.getElementById('formulario')
 
-const tituloInput = document.getElementById('titulo')
-const descricaoInput = document.getElementById('descricao')
-const dataIInput = document.getElementById('dataI')
-const dataTInput = document.getElementById('dataT')
-
+//const titulo= document.getElementById('titulo')
+const novaTarefa = document.getElementById('novaTarefa')
+const dataTarefa = document.getElementById('dataTarefa')
+const descricaoTarefa = document.getElementById('descricao')
 const tarefas = document.getElementById('tarefas')
 
-const aviso = document.getElementById('aviso-vazio')
-const erro = document.getElementById('mensagem-erro')
-
-letlista = []
+const lista = []
 
 
-form.addEventListener('submit', (e) => {
+formulario.addEventListener("submit", (e) => {
     e.preventDefault()
 
     const titulo = novaTarefa.value.trim()
-    //const data = dataTarefa.value.trim()
+    const data = dataTarefa.value.trim()
+    const descricaoTarefa = descricaoTarefa.value.trim()
 
-    const descricao = descricao.value.trim()
-
-    if(titulo === "" || descricao === ""){
+    if(titulo === "" || data === ""){
         
-    
-        erro.textContent = 'Título e descrição são obrigatórios!'
-        erro.hidden = true
-        return
+        novaTarefa.classList.add(`${titulo === "" ? "is-invalid" : ""}`)
+        dataTarefa.classList.add(`${data === "" ? "is-invalid" : ""}`)
     }else{ 
-        
-        erro.hidden = false
 
-        tarefas.push({
-
+        lista.push({
             titulo: titulo,
-            descricao: descricao,
             data: data,
-            dataI: dataIInput,
-            dataT: dataTInput,
+            descricao: descricao,
             concluida: false,
         })
 
-        form.reset()
-        tituloInput.focus()
-        render()
+        novaTarefa.value = ""
+        dataTarefa.value = ""
+        descricaoTarefa.value = ""
+        
+        atualizarLista()
     }
-
-   atualizarLista()
+ 
 })
-
-
 
 
 function atualizarLista(){
@@ -62,7 +49,7 @@ function atualizarLista(){
     lista.forEach((tarefa, index) => {
 
 
-        const[ano, mes, dia] = tarefas.dataset.split("-")
+        const[ano, mes, dia] = tarefa.data.split("-")
         const dataFormatada = `${dia}/${mes}/${ano}` 
     
         const divTarefa = document.createElement("div")
