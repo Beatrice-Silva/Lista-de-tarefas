@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
@@ -18,32 +19,36 @@
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
- <header>
-    <h1>Minhas listas de tarefas</h1>
-       
-        
 
-        </header>
+<body>
+
+    <header>
+    <h1>Minhas listas de tarefas</h1>
+    </header>
+
     <div class="container">
        
         <h2><strong>Criação de tarefa:</strong></h2>
         <main>
+            
     <section class="form">
-            <form id="form">
+            <form id="form-floating">
+
+                
+                <input type="text" id="novaTarefa" placeholder="Título da tarefa." required>
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" placeholder="Título da tarefa." required>
-
-                <label for="descricao">Descrição:</label>
+                
+                
+                
                 <input type="text" id="descricao" placeholder="Descrição da tarefa." >
+                <label for="descricao">Descrição:</label>
 
-                <label for="dataI">Data início: (opcional)</label>
-                <input type="date" id="dataI">
 
-                <label for="dataT">Data termino: (opcional)</label>
-                <input type="date" id="dataT">
+                
+                <input type="date" id="dataTarefa" class="form-control">
+                <label for="dataTarefa">Data da tarefa: (opcional)</label>
 
-                <button type="submit">Criar nova tarefa</button>
+                <button type="submit" class="btn btn-primary">Criar nova tarefa</button>
                
             </form>
         </section>
@@ -51,27 +56,33 @@
         
         
     </div>
+
     <div class="container">
-<h2>Listagens de tarefas abaixo:</h2>
+
+
+        <div id="tarefas">
+
     <div class="card">
 
     <h2 class="segundotitulo">Tarefas:</h2>
 
-    <p id="mensagem-erro" hidden></p>
-        <h3 id="aviso-vazio">Não há tarefas por aqui ainda... ~* </h3>
-        <ul id="lista"></ul>
-        </main>
-
-    <div>
-
-        <button type="submit" class="btn-ssucess">Concluir</button>
-
-        <button type="submit" class="btn-delete">Excluir</button>
-    </div>
-
-    </div>
-    </div>
+    <p id="aviso-vazio">Nenhuma tarefa cadastrada.</p>
     
+        
+        
+
+    
+    </div>
+
+    </div>
+
+    </div>
+
+        </div>
+
+    
+    
+    </main>
 
     <footer></footer>
     

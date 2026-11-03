@@ -11,7 +11,7 @@ const tarefas = document.getElementById('tarefas')
 const aviso = document.getElementById('aviso-vazio')
 const erro = document.getElementById('mensagem-erro')
 
-let lista = []
+letlista = []
 
 
 form.addEventListener('submit', (e) => {
@@ -31,6 +31,7 @@ form.addEventListener('submit', (e) => {
     }else{ 
         
         erro.hidden = false
+
         tarefas.push({
 
             titulo: titulo,
@@ -47,9 +48,14 @@ form.addEventListener('submit', (e) => {
     }
 
    atualizarLista()
-});
+})
+
+
+
 
 function atualizarLista(){
+
+
     tarefas.innerHTML = ""
     console.log(lista)
 
@@ -60,71 +66,62 @@ function atualizarLista(){
         const dataFormatada = `${dia}/${mes}/${ano}` 
     
         const divTarefa = document.createElement("div")
-        divTarefa.classList("tarefa")       
+        divTarefa.classList.add("tarefa")       
 
         if(tarefas.concluida){
-            divTarefa.classList("concluida")       
+            divTarefa.classList.add("concluida")       
         
         }
 
-        const containerexro = document.createElement("div")
-    
+        const containerTexto = document.createElement("div")
+        containerTexto.classList.add("containerTexto")
 
-    })
+        const titulo = document.createElement("h3")
+        titulo.textContent = tarefa.titulo + " - " + dataFormatada
+
+        const descricao = document.createElement("p")
+        descricao.textContent = tarefa.descricao
+
+        containerTexto.appendChild(titulo)
+        containerTexto.appendChild(descricao)
+
+        
+        const acoes = document.createElement("div")
+        acoes.classList.add("acoes")
+
+    acoes.innerHTML = tarefa.concluida
     
+    ? `<button class="btn excluir" onclick="excluirTareda(${index})">Excluir</button>`
+    
+    : `<button class="btn concluir" onclick="concluirTarefa(${index})">Concluir</button>`
+      `<button class="btn excluir" onclick="excluirTareda(${index})">Excluir</button>`
+
+
+    divTarefa.appendChild(containerTexto)
+    divTarefa.appendChild(acoes)
+
+    tarefas.appendChild(divTarefa)
+     
+    })
 }
 
 
-
-lista.addEventListener('click', (e) => {
-
-    if(e.target.classList.contains('excluir')){
-        const id = Number(e.target.dataset.id)
-        tarefas = tarefas.filter(t => t.id !== id)
-        render();
-    }
-})
-
-render()
-
-function concluirTarefa = (index) =>({
-    lista[index].concluida =true
-        atualizarLista()
-    
-})
-
-function concluirTarefa = (index) => ({
-    lista.splice(index, 2)
-        atualizarLista()
+novaTarefa.addEventListener("input", () => {
+        novaTarefa.classList.remove("is-invalid")
 })
 
 
+novaTarefa.addEventListener("input", () => {
+        dataTarefa.classList.remove("is-invalid")
+})
 
-
-/*
-function render(){
-    lista.innerHTML = ''
-    aviso.hidden = tarefas.length !== 0
-    tarefas.forEach(t => {
-        const li = document.createElement('li')
-        li.innerHTML = `
-            <div>
-                <strong>
-                ${t.titulo}</strong> - ${t.descricao}
-                <br>
-
-                <small>
-                ${t.dataI ? 'Início: '+t.dataI : ''} 
-                ${t.dataT ? '| Fim: '+t.dataT : ''}
-                </small>
-
-            </div>
-            <button class="excluir" data-id="${t.id}">Excluir</button>`
-
-        lista.appendChild(li);
-
-    })
-
+const concluirTarefa = (index) => {
+    lista[index].concluida = true
+    atualizarLista()
 }
 
-*/
+
+const excluirTarefa = (index) => {
+    lista.splice(index, 1)
+    atualizarLista()
+}
