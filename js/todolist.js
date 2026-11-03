@@ -15,7 +15,7 @@ formulario.addEventListener("submit", (e) => {
 
     const titulo = novaTarefa.value.trim()
     const data = dataTarefa.value.trim()
-    const descricaoTarefa = descricaoTarefa.value.trim()
+    const descricao = descricaoTarefa.value.trim()
 
     if(titulo === "" || data === ""){
         
