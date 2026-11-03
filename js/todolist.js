@@ -1,7 +1,5 @@
 
 const formulario = document.getElementById('formulario')
-
-//const titulo= document.getElementById('titulo')
 const novaTarefa = document.getElementById('novaTarefa')
 const dataTarefa = document.getElementById('dataTarefa')
 const descricaoTarefa = document.getElementById('descricao')
